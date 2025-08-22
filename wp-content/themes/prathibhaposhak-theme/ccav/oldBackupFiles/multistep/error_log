@@ -1,0 +1,4 @@
+[24-Aug-2023 13:29:42 UTC] PHP Warning:  Undefined array key "merchant_param1" in /home/psw7h71rclhp/public_html/ccav/multistep/donate_step3.php on line 54
+[24-Aug-2023 13:29:42 UTC] PHP Warning:  Undefined array key "paymode" in /home/psw7h71rclhp/public_html/ccav/multistep/donate_step3.php on line 58
+[24-Aug-2023 13:31:31 UTC] PHP Warning:  Undefined array key "merchant_param1" in /home/psw7h71rclhp/public_html/ccav/multistep/donate_step3.php on line 54
+[24-Aug-2023 13:31:31 UTC] PHP Warning:  Undefined array key "paymode" in /home/psw7h71rclhp/public_html/ccav/multistep/donate_step3.php on line 58

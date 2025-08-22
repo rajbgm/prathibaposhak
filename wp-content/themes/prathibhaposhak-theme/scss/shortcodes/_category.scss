@@ -1,0 +1,54 @@
+/*****************************
+  Category
+*****************************/
+.category{
+	cursor: pointer;
+	.category-item{
+		display: block;
+		.category-icon{
+			i{
+				font-size: 50px;
+				line-height: 50px;
+				color: $gray-8;
+			}
+		}
+		h5{
+			font-weight: 500;
+			font-size: 18px;
+		}
+	}
+}
+
+.category{
+	transition: all 0.3s ease-in-out;
+
+}
+.category .category-item h5{
+	font-size: 18px;
+}
+
+.category:hover .category-icon i{
+		color: $white !important;
+}
+.category:hover	.category-item h5{
+		color: $white !important;
+}
+
+
+/* category-style-2 */
+.category-style-2{
+	cursor: pointer;
+		&:hover{
+		background: $primary !important;
+		border-radius: $border-radius;
+		color: $white;
+		.category-icon{
+			i{
+				color: $white !important;
+			}
+		}
+		h5{
+			color: $white !important;
+		}
+	}
+}

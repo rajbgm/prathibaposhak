@@ -1,0 +1,45 @@
+/*****************************
+  Countdown
+*****************************/
+.countdown-wrapper{
+	display: flex;
+		.countdown {
+			padding: 25px 50px 25px 0px;
+			width: 100%;
+
+			span {
+				font-size: 54px;
+				line-height: 54px;
+				font-weight: 600;
+				font-family: $font-hedding;
+				color: $gray-9;
+			}
+
+			p {
+				font-size: 18px;
+				line-height: 26px;
+				font-weight: 500;
+				text-transform: capitalize;
+				margin-bottom: 0;
+			}
+		}
+}
+
+/*****************************
+  Responsive
+*****************************/
+@media (max-width:575px) {
+	.countdown-wrapper{
+		margin-bottom: 20px;
+		.countdown {
+			padding:0px 10px;
+			span{
+				font-size: 32px;
+	    	line-height: 54px;
+			}
+			p{
+				font-size: 14px;
+			}
+		}
+	}
+}

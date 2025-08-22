@@ -1,0 +1,37 @@
+/*****************************
+  Tab
+*****************************/
+.nav-tabs{
+	border: none;
+	.nav-link{
+		background: $primary;
+		color:$white;
+		border-radius:0;
+		border: none;
+  	padding: 15px 10px;
+  	font-size: 16px;
+    font-weight: 600;
+    width: 25%;
+    text-align: center;
+	}
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+	border: none;
+	color: $primary;
+  background-color: $white;
+}
+
+
+/*****************************
+  responsive
+*****************************/
+@media (max-width:575px) {
+
+	.nav-tabs .nav-link{
+  	padding: 15px 30px;
+  	width: 100%;
+    margin-bottom: 10px;
+	}
+
+}

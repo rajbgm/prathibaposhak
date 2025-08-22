@@ -1,0 +1,79 @@
+/*****************************
+  Shortcodes
+*****************************/
+
+/*****************************
+  Accordion
+*****************************/
+.accordion {
+	.card {
+		border: none;
+		&:last-child {
+			.card-header {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.card-body {
+		padding: 20px 30px 30px 30px;
+		ul{
+			li{
+				margin-bottom: 5px;
+			}
+		}
+	}
+	.card-header {
+		background: none;
+		border-bottom: none;
+		padding: 0;
+	}
+	>.card {
+		.card-header {
+			margin-bottom: 10px;
+		}
+	}
+	.accordion-icon.card-header {
+		button {
+			display: flex;
+			background: $primary;
+			font-size: 18px;
+			color: $white;
+			padding: 20px;
+			width: 100%;
+			text-align: left;
+			border: none;
+			font-weight: normal;
+			position: relative;
+			border-radius: $border-radius;
+			font-weight: 500;
+		}
+		.btn {
+			&:after {
+				content: "\f078";
+				margin-left: auto;
+				transform: rotate(180deg);
+				font-family: "Font Awesome 5 Free";
+				font-weight: bold;
+				font-size: 14px;
+			}
+		}
+		button.collapsed {
+			background: $gray-9;
+			&:after {
+				transform: rotate(0deg);
+			}
+		}
+	}
+}
+
+
+.accordion .card-header .btn:before{
+	content: none;
+	position: inherit;
+}
+.accordion .card-header .btn:after{
+	content: none;
+	position: inherit;
+}
+
+

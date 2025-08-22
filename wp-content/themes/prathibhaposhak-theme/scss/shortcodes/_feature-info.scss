@@ -1,0 +1,39 @@
+/*****************************
+  Feature Info
+*****************************/
+.feature-box {
+  padding: 50px;
+  .feature-icon{
+    border-radius: 50%;
+    text-align: center;
+    width: 130px;
+    height: 130px;
+    line-height: 130px;
+    margin:0 auto;
+    align-items: center;
+    flex: 0 0 130px;
+
+      i{
+        font-size: 52px;
+      }
+    }
+}
+
+
+@media (max-width:1199px) {
+
+  .feature-box {
+      padding: 30px;
+    }
+    .feature-box .feature-icon{
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        flex: 0 0 80px;
+    }
+
+    .feature-box  .feature-icon i{
+      font-size: 30px;
+    }
+
+}

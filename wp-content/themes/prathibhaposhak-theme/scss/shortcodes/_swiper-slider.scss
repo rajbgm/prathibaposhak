@@ -1,0 +1,38 @@
+/*****************************
+	Swiper Slider
+*****************************/
+.swiper-button-prev {
+  background-image: none;
+  opacity: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: $gray-9;
+  height: 40px;
+  border-radius: $border-radius;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  left: 3%;
+}
+.swiper-button-next {
+  background-image: none;
+  opacity: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: $gray-9;
+  height: 40px;
+  border-radius: $border-radius;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  right: 3%;
+}
+
+
+@media (max-width:767px) {
+
+	.swiper-button-prev, .swiper-button-next {
+	  display: none;
+	}
+
+}

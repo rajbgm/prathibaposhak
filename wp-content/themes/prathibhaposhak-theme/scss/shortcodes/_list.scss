@@ -1,0 +1,35 @@
+/*****************************
+  List Style
+*****************************/
+.list-check {
+  margin: 0;
+  padding: 0;
+
+  li {
+    position: relative;
+    list-style-type: none;
+    margin-bottom: 20px;
+
+    i {
+      background: $gray-2;
+      color: $primary;
+      height: 36px;
+      width: 36px;
+      line-height: 36px;
+      text-align: center;
+      border-radius: 100%;
+      display: inline-block;
+      margin-right: 15px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+  }
+
+}
+
+
+
+

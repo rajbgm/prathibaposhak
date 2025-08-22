@@ -1,0 +1,94 @@
+/*
+
+Template: Pratibha Poshak
+Version: 1.0.0
+Author: potenzaglobalsolutions
+Design and Developed by: Pratibha Poshak
+
+NOTE: This is main stylesheet of template, This file contains the styling for the actual Template.
+
+*/
+
+/*================================================
+[  Table of contents  ]
+================================================
+
+ :: Typography
+ :: Helper Classes
+ :: Shortcodes
+  	- Accordion
+  	- Button
+    - Category
+    - Client
+    - Countdown
+    - Counter
+    - Course
+    - Events
+    - Feature Info
+    - Form
+    - Gallery
+    - List Style
+    - Owl Carousel
+    - Portfolio
+    - Pricing Table
+    - Select Dropdown
+    - Skill
+    - Social Icon
+    - Swiper Slider
+    - Tab
+    - Team
+    - Testimonial
+ :: Header
+   - Header Style 02
+   - Header Transparent
+ :: Layout
+   - Section Title
+   - Sticky column
+ :: Blog
+ :: Not Found
+ :: Footer
+ :: Responsive
+
+======================================
+[ End table content ]
+======================================*/
+
+// Core files
+@import "variables";
+@import "typography";
+@import "helpers";
+
+// Shortcodes
+@import "shortcodes/accordion";
+@import "shortcodes/button";
+@import "shortcodes/category";
+@import "shortcodes/client";
+@import "shortcodes/countdown";
+@import "shortcodes/counter";
+@import "shortcodes/course";
+@import "shortcodes/events";
+@import "shortcodes/feature-info";
+@import "shortcodes/form";
+@import "shortcodes/gallery";
+@import "shortcodes/list";
+@import "shortcodes/owl-carousel";
+@import "shortcodes/portfolio";
+@import "shortcodes/pricing";
+@import "shortcodes/select";
+@import "shortcodes/skill";
+@import "shortcodes/social-icon";
+@import "shortcodes/swiper-slider";
+@import "shortcodes/tab";
+@import "shortcodes/team";
+@import "shortcodes/testimonial";
+
+// Structure
+@import "header";
+@import "layout";
+@import "footer";
+
+// Pages
+@import "blog";
+
+// Responsive
+@import "responsive";

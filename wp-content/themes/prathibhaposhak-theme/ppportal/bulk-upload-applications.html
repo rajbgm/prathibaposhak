@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulk Upload Applications - RCF Pratibha Poshak Academy</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <?php include 'header.html'; ?>
+        
+<header class="bg-dark text-white text-center p-3">
+    <h1>RCF Pratibha Poshak Academy</h1>
+    <p>Manage Your Operations Efficiently</p>
+</header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">Dashboard</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="view-applications.html">View Applications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bulk-upload-applications.html">Bulk Upload Applications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shortlisting.html">Shortlisting Process</a></li>
+                    <li class="nav-item"><a class="nav-link" href="screening.html">Screening Tests/Interviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="results.html">Results Management</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reports.html">Reports & Analytics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="user-management.html">User Management</a></li>
+                    <li class="nav-item"><a class="nav-link" href="settings.html">Settings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="support.html">Help & Support</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="container mt-4">
+            <section id="bulk-upload" class="bg-white p-4 rounded shadow">
+                <h2>Upload Applications in Bulk</h2>
+                <p>Use the form below to upload a CSV or Excel file containing multiple student applications.</p>
+                <form id="upload-form" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="file-upload" class="btn btn-primary">
+                            Choose File
+                        </label>
+                        <input type="file" id="file-upload" name="file" accept=".csv, .xls, .xlsx" class="d-none" required>
+                    </div>
+                    <button type="submit" class="btn btn-success">Upload Applications</button>
+                </form>
+                <div class="instructions mt-4">
+                    <h3>Instructions</h3>
+                    <ul>
+                        <li>Ensure your file is in CSV or Excel format.</li>
+                        <li>Include headers: Application ID, Name, Email, etc.</li>
+                        <li>Review the file for errors before uploading.</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <?php include 'footer.html'; ?>
+
+<footer class="bg-dark text-white text-center p-3 mt-4">
+    <p>&copy; 2024 RCF Pratibha Poshak Academy. All rights reserved.</p>
+</footer>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

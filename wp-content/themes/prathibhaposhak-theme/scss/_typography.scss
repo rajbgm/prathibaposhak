@@ -1,0 +1,472 @@
+/*****************************
+  Typography
+*****************************/
+body {
+	font-family: $font-base;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 14px;
+	line-height: 1.5;
+	color: $body-color;
+	overflow-x: hidden;
+}
+
+a {
+	outline: medium none !important;
+	color: $primary;
+	transition: all 0.3s ease-in-out;
+	&:focus {
+		color: $primary;
+		text-decoration: none !important;
+	}
+	&:hover {
+		color: $primary;
+		text-decoration: none !important;
+	}
+}
+
+input {
+	outline: medium none !important;
+	color: $primary;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6{
+	font-family: $font-hedding;
+	font-weight: normal;
+	color: $gray-8;
+	margin-top: 0px;
+	font-weight: 700;
+	a {
+		color: inherit;
+	}
+}
+
+h1, .h1 {
+	font-size: 52px;
+	font-style: normal;
+}
+
+h2, .h2{
+	font-size: 36px;
+}
+
+h3, .h3 {
+	font-size: 30px;
+}
+
+h4, .h4 {
+	font-size: 24px;
+}
+
+h5, .h5 {
+	font-size: 20px;
+}
+
+h6, .h6 {
+	font-size: 16px;
+}
+
+p {
+	line-height: 1.8;
+}
+
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary h4,
+.bg-primary h5,
+.bg-primary h6,
+.bg-primary p {
+    color: $white;
+}
+
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark h4,
+.bg-dark h5,
+.bg-dark h6,
+.bg-dark p{
+    color: $white;
+}
+
+.bg-primary-gradient h1,
+.bg-primary-gradient h2,
+.bg-primary-gradient h3,
+.bg-primary-gradient h4,
+.bg-primary-gradient h5,
+.bg-primary-gradient h6,
+.bg-primary-gradient p {
+    color: $white;
+}
+
+section {
+	position: relative;
+}
+
+label {
+	font-weight: normal;
+}
+
+.lead{
+	font-weight: 400;
+	font-size: 18px;
+}
+
+*::-moz-selection {
+	background: $primary;
+	color: $white;
+	text-shadow: none;
+}
+
+::-moz-selection {
+	background: $primary;
+	color: $white;
+	text-shadow: none;
+}
+
+::selection {
+	background: $primary;
+	color: $white;
+	text-shadow: none;
+}
+
+/* form-control */
+.form-control {
+	border: none;
+	background-color: $white;
+	height: 48px;
+	padding: 10px 55px 10px 20px;
+	box-shadow: none;
+	font-size: 14px;
+	font-weight: 400;
+	color: $gray-7;
+	border-radius: 5px 0px 0px 5px !important;
+	background-clip: inherit !important;
+	&:focus {
+		box-shadow: none;
+		border-color: $primary;
+		background-color: $gray-2;
+	}
+}
+
+.form-control::-moz-placeholder {
+	color: $gray-5;
+}
+
+.form-control::-ms-input-placeholder {
+	color: $gray-5;
+}
+
+.form-control::-webkit-input-placeholder {
+	color: $gray-5;
+}
+
+/* form-dark */
+.form-dark .form-control{
+	background-color: $white;
+	&:focus {
+		box-shadow: $box-shadow;
+		border-color: $primary;
+	}
+}
+
+/* form bg white */
+.bg-white .form-control{
+	background: $gray-1;
+}
+
+
+.form-dark .form-control::-moz-placeholder {
+	color: $gray-7;
+}
+
+.form-dark .form-control::-ms-input-placeholder {
+	color: $gray-7;
+}
+
+.form-dark .form-control::-webkit-input-placeholder {
+	color: $gray-7;
+}
+
+
+.form-dark {
+	.custom-checkbox {
+		.custom-control-label {
+			&:before {
+				border: 1px solid $gray-4;
+			}
+		}
+	}
+}
+
+/* custom-file */
+.custom-file {
+	height: 50px;
+	.custom-file-input {
+		height: 50px;
+		color: $gray-8;
+		border-radius: $border-radius;
+		border-color: $border-color;
+		&:focus {
+			box-shadow: none;
+			border-color: $primary;
+		}
+	}
+	.custom-file-label {
+		height: 50px;
+		font-size: 14px;
+		font-weight: 600;
+		color: $gray-8;
+		border-color: $border-color;
+		padding: 15px 90px 15px 20px;
+		border-radius: $border-radius;
+		&:after {
+			height: 48px;
+			padding: 14px 25px;
+		}
+	}
+}
+
+.custom-file-input:focus~.custom-file-label {
+	box-shadow: none;
+	border-color: $primary;
+}
+
+/* input-group-prepend */
+.input-group-prepend,
+.input-group-append {
+	.input-group-text {
+		background: transparent;
+		border-color: $border-color;
+		box-shadow: none;
+		justify-content: center;
+	}
+}
+
+/* checkbox */
+.custom-control-input {
+	&:checked~.custom-control-label {
+		&:before {
+			background: $primary;
+			border-color: $primary;
+		}
+	}
+	&:not(:disabled) {
+		&:active~.custom-control-label {
+			&:before {
+				background: transparent;
+				border-color: transparent;
+			}
+		}
+	}
+	&:focus~.custom-control-label {
+		&:before {
+			box-shadow: none;
+		}
+	}
+	&:focus {
+		&:not(:checked)~.custom-control-label {
+			&:before {
+				border-color: $border-color;
+			}
+		}
+	}
+}
+
+.custom-control-label {
+	&:before {
+		top: 2px;
+	}
+	&:after {
+		top: 2px;
+	}
+}
+
+.custom-checkbox {
+	.custom-control-label {
+		&:before {
+			border-radius: $border-radius;
+			border: 2px solid $gray-2;
+		}
+	}
+}
+
+
+.form-group{
+    .form-radio {
+	.custom-control-input {
+		&:checked~.custom-control-label {
+			&::after {
+				background: $gray-8;
+				border-color: $gray-8;
+				border-radius: 50%;
+			}
+		}
+	}
+  }
+}
+
+/* border */
+.border {
+	border-color: $border-color !important;
+}
+
+.border-top {
+	border-top-color: $border-color !important;
+}
+
+.border-left {
+	border-left-color: $border-color !important;
+}
+
+.border-right {
+	border-right-color: $border-color !important;
+}
+
+.border-bottom {
+	border-bottom-color: $border-color !important;
+}
+
+.border-primary{
+  border-color: $primary !important;
+}
+.border-dark {
+  border-color: $gray-9 !important;
+}
+.border-light {
+  border-color: rgba($white, .10) !important;
+}
+/* border-radius */
+.border-radius{
+  border-radius: $border-radius !important;
+}
+
+.border-radius-none {
+  border-radius: 0 !important;
+}
+
+.border-radius-left-none {
+  border-radius: 0 3px 3px 0;
+}
+
+.border-radius-right-none {
+  border-radius: 3px 0 0 3px;
+}
+
+/* badge */
+.badge {
+
+	+ {
+		.badge {
+			margin-left: 6px;
+		}
+	}
+}
+
+.badge-md {
+	padding: 5px 8px;
+	font-size: 13px;
+	font-weight: normal;
+}
+
+.badge-primary {
+	background: $primary;
+}
+
+.breadcrumb {
+	padding-left: 0;
+	background: transparent;
+	font-family: $font-hedding;
+	font-weight: 500;
+	.breadcrumb-item {
+		color: $white;
+		a {
+			color: $white;
+			&:hover {
+				color: $primary;
+			}
+		}
+		&:before {
+			color: $white;
+		}
+	}
+	.active {
+		color: $primary;
+	}
+}
+
+
+/*****************************
+  Responsive
+*****************************/
+
+@media (max-width:991px) {
+
+	/* Typography */
+	h1, .h1{
+		font-size: 48px;
+	}
+
+	h2, .h2{
+		font-size: 30px;
+	}
+
+	h3, .h3{
+		font-size: 24px;
+	}
+
+	h4, .h4{
+		font-size: 20px;
+	}
+
+}
+
+@media (max-width:767px) {
+
+	/* Typography */
+	h1, .h1{
+		font-size: 42px;
+		font-style: normal;
+	}
+
+	h2, .h2{
+		font-size: 28px;
+	}
+
+}
+
+@media (max-width:479px) {
+
+	/* Typography */
+	h1, .h1 {
+		font-size: 32px;
+		font-style: normal;
+	}
+
+	h2, .h2{
+		font-size: 26px;
+	}
+
+	h3, .h3 {
+		font-size: 20px;
+	}
+
+	h4, .h4 {
+		font-size: 18px;
+	}
+
+	h5, .h5 {
+		font-size: 16px;
+	}
+
+	h6, .h6 {
+		font-size: 14px;
+	}
+
+}

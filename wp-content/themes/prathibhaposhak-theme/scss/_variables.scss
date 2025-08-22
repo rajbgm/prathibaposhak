@@ -1,0 +1,36 @@
+// Font family
+$font-base: 		'Poppins', sans-serif;
+$font-hedding:	'Poppins', sans-serif;
+
+// Colors
+$body-color:	  #666666;  // body-text
+$primary:				#a61d37;  // Primary color
+$primary-2:			#fa3a72;  // Primary 2 color
+$white:					#ffffff;
+$gray-1: 				#f6f6f6; 	// bg light
+$gray-2: 				#f4f4f5;
+$gray-3: 				#cdcdcd;
+$gray-4: 				#c1c1c1;
+$gray-5: 				#b7b7b7;
+$gray-6: 				#9b9b9b;
+$gray-7: 				#16243e;
+$gray-8: 				#1a2844;  // Hedding & text color color
+$gray-9: 				#1a2844;  // dark bg color
+$black:  				#000000;
+
+$border-color: 	#eeeeee;
+
+//  For button and input border radius
+$border-radius: 5px;
+
+
+$box-shadow-sm:	0px 5px 16px 0px rgba($gray-7, .15);
+$box-shadow:	  0px 4px 20px -3px rgba($gray-7, .15);
+$boxshadow-lg:  0 1rem 3rem rgba($gray-7, .175);
+
+$bg-primary-gradient: linear-gradient(to right, $primary 30%, $primary-2 100%);
+$bg-dark-gradient: 		linear-gradient(to right, $gray-9 10%, $gray-9 100%);
+
+
+
+

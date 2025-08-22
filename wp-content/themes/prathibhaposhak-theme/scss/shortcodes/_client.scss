@@ -1,0 +1,28 @@
+/*****************************
+  Client
+*****************************/
+.our-clients.owl-carousel{
+  padding: 40px 50px;
+  background-color: $primary;
+  .owl-item{
+    img {
+      padding: 0 25px;
+      height: 65px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+// our-partners
+.our-partners{
+  .item{
+    img{
+      width: 90%;
+      display: inherit;
+      background: $gray-1;
+      padding: 20px 20px;
+      height: 70px;
+    }
+  }
+}

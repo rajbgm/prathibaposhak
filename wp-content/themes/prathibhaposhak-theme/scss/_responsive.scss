@@ -1,0 +1,100 @@
+/*************************
+  Display Responsive
+*************************/
+@media only screen and (max-width: 991px) and (min-width: 768px){
+	.container {
+	    max-width: 96%;
+	}
+
+}
+
+@media (min-width: 1200px){
+
+	/* container */
+	.container {
+	    max-width: 1170px;
+	}
+
+}
+
+@media (min-width: 1500px){
+
+	/* container */
+	.container {
+	    max-width: 1140px;
+	}
+
+}
+
+@media (max-width:991px) {
+
+  /* Page section margin padding */
+
+  .space-ptb {
+    padding: 70px 0;
+  }
+
+  .space-pt {
+    padding-top: 70px ;
+  }
+
+  .space-pb {
+    padding-bottom:70px;
+  }
+
+  .space-sm-ptb {
+    padding: 50px 0;
+  }
+
+  .space-sm-pt {
+    padding-top: 50px;
+  }
+
+  .space-sm-pb {
+   padding-bottom:50px;
+  }
+
+  .space-lg-mt{
+    margin-top: 100px;
+  }
+
+}
+
+@media (max-width:767px) {
+
+  /* container */
+  .container {
+      max-width: 100%;
+  }
+
+  	/* Page section margin padding */
+
+  .space-ptb {
+    padding: 50px 0;
+  }
+
+  .space-pt {
+    padding-top: 50px ;
+  }
+
+  .space-pb {
+    padding-bottom:50px;
+  }
+
+  .space-sm-ptb {
+    padding: 30px 0;
+  }
+
+  .space-sm-pt {
+    padding-top: 30px;
+  }
+
+  .space-sm-pb {
+   padding-bottom:30px;
+  }
+
+  .space-lg-mt{
+    margin-top: 70px;
+  }
+
+}

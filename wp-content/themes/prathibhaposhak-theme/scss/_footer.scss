@@ -1,0 +1,28 @@
+/*****************************
+  Footer
+*****************************/
+.footer{
+  .footer-logo {
+      height: 60px;
+  }
+  .contact-item{
+    align-items: flex-start;
+    display: flex;
+    margin-bottom: 20px;
+    i{
+      color: $primary;
+      font-size: 22px;
+      width: 20px;
+    }
+  }
+  .footer-link{
+    ul{
+      li{
+        margin-bottom: 15px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

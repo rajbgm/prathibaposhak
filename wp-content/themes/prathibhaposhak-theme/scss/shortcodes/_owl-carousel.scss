@@ -1,0 +1,207 @@
+/*****************************
+	Owl Carousel
+*****************************/
+.owl-carousel {
+	.owl-item {
+		img {
+			width: auto;
+			display: inherit;
+		}
+
+	}
+
+	.owl-nav {
+		cursor: pointer;
+		z-index: 999;
+		width: 100%;
+
+		button {
+			span {
+				position: relative;
+				top: -4px;
+				width: 18px;
+				height: 2px;
+				display: inline-block;
+				background: $primary;
+				transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s;
+
+				&:before {
+					content: "";
+					display: block;
+					height: 2px;
+					position: absolute;
+					border-radius: 2px;
+					background: inherit;
+				}
+
+				&:after {
+					content: "";
+					display: block;
+					height: 2px;
+					position: absolute;
+					border-radius: 2px;
+					background: inherit;
+				}
+
+			}
+
+			span.prev-arrow {
+				margin-right: 15px;
+
+				&:before {
+					transform: rotate(-45deg);
+					top: -4px;
+					left: 0px;
+					width: 10px;
+				}
+
+				&:after {
+					transform: rotate(45deg);
+					width: 10px;
+					bottom: -4px;
+					left: 0px;
+				}
+
+			}
+
+			span.next-arrow {
+				margin-left: 15px;
+
+				&:before {
+					transform: rotate(45deg);
+					top: -4px;
+					right: 0px;
+					width: 10px;
+				}
+
+				&:after {
+					transform: rotate(-45deg);
+					width: 10px;
+					bottom: -4px;
+					right: 0px;
+				}
+
+			}
+
+			&:hover {
+				span {
+					width: 50px;
+				}
+
+			}
+
+		}
+
+		.owl-prev {
+			display: block;
+			position: absolute;
+			text-indent: inherit;
+			width: auto;
+			cursor: pointer;
+			transition: all 0.2s ease-in-out;
+			left: 0px;
+			display: block;
+			position: absolute;
+			text-indent: inherit;
+			top: 50%;
+			transform: translateY(-50%);
+			margin: 0 !important;
+			display: inline-block;
+			margin: 14px 2px 0;
+		}
+
+		.owl-next {
+			display: block;
+			position: absolute;
+			text-indent: inherit;
+			width: auto;
+			cursor: pointer;
+			transition: all 0.2s ease-in-out;
+			right: 0px;
+			display: block;
+			position: absolute;
+			text-indent: inherit;
+			top: 50%;
+			transform: translateY(-50%);
+			margin: 0 !important;
+			display: inline-block;
+			margin: 14px 2px 0;
+		}
+
+	}
+
+	// owl-dots
+	.owl-dots {
+		.owl-dot {
+			span {
+				background: $gray-4;
+				width: 10px;
+				min-height: 4px;
+				border-radius: $border-radius;
+				transition: all 0.5s ease-in-out;
+				cursor: pointer;
+			}
+
+			&:hover {
+				span {
+					background: $primary;
+					width: 30px;
+				}
+
+			}
+
+		}
+
+		.owl-dot.active {
+			span {
+				background: $primary;
+				width: 30px;
+			}
+
+		}
+
+	}
+
+	.owl-dot {
+		display: inline-block;
+		margin: 0px 4px 0;
+	}
+
+}
+
+// owl-dots-bottom-left
+.owl-dots-bottom-left {
+	padding-bottom: 40px;
+	.owl-dots {
+		bottom:0px;
+		position: absolute;
+		left: 0px;
+		width: auto;
+	}
+
+}
+
+// owl-dots-bottom-left
+.owl-dots-bottom-center {
+	padding-bottom: 40px;
+
+	.owl-dots {
+		bottom:0px;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		width: auto;
+	}
+
+}
+
+@media (max-width:767px) {
+	.container {
+		max-width: 100%;
+	}
+
+	.owl-carousel .owl-nav {
+		display: none;
+	}
+
+}
