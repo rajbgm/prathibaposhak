@@ -274,9 +274,88 @@ function pp_opt($key, $fallback = '') {
   return $fallback;
 }
 
+/** ---------------------------------------
+ * Resources CPT + Taxonomy (Pratibha Poshak)
+ * --------------------------------------- */
+add_action('init', function () {
+  // CPT: resource (NO archive at /resources to avoid clash with landing page)
+  register_post_type('resource', [
+    'label'               => 'Resources',
+    'labels'              => [
+      'name'               => 'Resources',
+      'singular_name'      => 'Resource',
+      'add_new'            => 'Add New',
+      'add_new_item'       => 'Add New Resource',
+      'edit_item'          => 'Edit Resource',
+      'new_item'           => 'New Resource',
+      'view_item'          => 'View Resource',
+      'search_items'       => 'Search Resources',
+      'not_found'          => 'No resources found',
+      'not_found_in_trash' => 'No resources found in Trash',
+      'all_items'          => 'All Resources',
+    ],
+    'public'              => true,
+    'publicly_queryable'  => true,
+    'exclude_from_search' => false,
+    'show_ui'             => true,
+    'show_in_menu'        => true,
+    'show_in_nav_menus'   => true,
+    'show_in_admin_bar'   => true,
+    'show_in_rest'        => true,                 // Gutenberg + REST
+    'menu_icon'           => 'dashicons-media-document',
+    'menu_position'       => 22,
+    'hierarchical'        => false,
+    'supports'            => ['title','editor','excerpt','thumbnail','page-attributes'],
+    'has_archive'         => false,                // <-- important: frees /resources for the Page
+    'rewrite'             => [
+      'slug'       => 'library',                   // singles at /library/{post-name}
+      'with_front' => false,
+    ],
+    'query_var'           => true,
+    'map_meta_cap'        => true,
+  ]);
 
+  // Taxonomy: resource_category (subjects)
+  register_taxonomy('resource_category', ['resource'], [
+    'label'             => 'Resource Categories',
+    'labels'            => [
+      'name'          => 'Resource Categories',
+      'singular_name' => 'Resource Category',
+      'search_items'  => 'Search Categories',
+      'all_items'     => 'All Categories',
+      'edit_item'     => 'Edit Category',
+      'update_item'   => 'Update Category',
+      'add_new_item'  => 'Add New Category',
+      'new_item_name' => 'New Category Name',
+      'menu_name'     => 'Categories',
+    ],
+    'public'           => true,
+    'hierarchical'     => true,                    // parent/child if needed
+    'show_in_rest'     => true,
+    'show_admin_column'=> true,                    // shows Category column on Resources list
+    'rewrite'          => [
+      'slug'       => 'resource-category',         // /resource-category/{subject}
+      'with_front' => false,
+    ],
+  ]);
+});
 
-
-
-
-
+/** Seed default categories once after theme switch */
+add_action('after_switch_theme', function () {
+  $default_terms = [
+    'Mathematics & Logic',
+    'Physics',
+    'Computational Thinking & Programming',
+    'English & Communication Skills',
+    'Inspirational',
+    'Subject Dictionaries',
+    'YouTube Channel',
+  ];
+  foreach ($default_terms as $name) {
+    if (!term_exists($name, 'resource_category')) {
+      wp_insert_term($name, 'resource_category');
+    }
+  }
+  // Flush rewrites so /library + /resource-category work immediately
+  flush_rewrite_rules();
+});
