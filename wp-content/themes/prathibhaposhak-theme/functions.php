@@ -359,3 +359,41 @@ add_action('after_switch_theme', function () {
   // Flush rewrites so /library + /resource-category work immediately
   flush_rewrite_rules();
 });
+
+
+// --- Gallery CPT + Taxonomy
+add_action('init', function () {
+  register_post_type('gallery_item', [
+    'label' => 'Gallery',
+    'public' => true,
+    'menu_icon' => 'dashicons-format-gallery',
+    'show_in_rest' => true,
+    'supports' => ['title','thumbnail','editor','excerpt','page-attributes'],
+    'has_archive' => false,
+    'rewrite' => ['slug' => 'gallery-item', 'with_front' => false],
+  ]);
+
+  register_taxonomy('gallery_group', ['gallery_item'], [
+    'label' => 'Gallery Groups',
+    'public' => true,
+    'hierarchical' => false,
+    'show_in_rest' => true,
+    'show_admin_column' => true,
+    'rewrite' => ['slug' => 'gallery-group', 'with_front' => false],
+  ]);
+});
+
+// Optional: seed default groups on theme switch
+add_action('after_switch_theme', function () {
+  foreach ([
+    'ts' => 'Talent Search',
+    'in' => 'Induction',
+    'tm' => 'Teaching & Mentoring',
+    'rt' => 'Retreats',
+  ] as $slug => $name) {
+    if (!term_exists($name, 'gallery_group')) {
+      wp_insert_term($name, 'gallery_group', ['slug' => $slug]);
+    }
+  }
+  flush_rewrite_rules();
+});
